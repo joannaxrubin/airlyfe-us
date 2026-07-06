@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Airlyfe - Breathe With Proof</title>
+<meta name="description" content="Air filtration built on 40+ patents and 10 years of KAIST university R&D. Reusable masks. Replaceable filters. Real data.">
+<link rel="canonical" href="https://airlyfe.us/">
+<meta name="theme-color" content="#09192E">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="Airlyfe">
+<meta property="og:title" content="Airlyfe - Breathe With Proof">
+<meta property="og:description" content="Reusable masks and replaceable filters built on 40+ patents and a decade of KAIST university research. Clinical-grade protection, validated by data.">
+<meta property="og:url" content="https://airlyfe.us/">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Airlyfe - Breathe With Proof">
+<meta name="twitter:description" content="Reusable masks and replaceable filters, validated by data.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='22' fill='%2309192E'/%3E%3Ctext x='50' y='50' font-family='Arial,sans-serif' font-size='52' font-weight='800' fill='%233FC3DA' text-anchor='middle' dominant-baseline='central'%3EA%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;500;700;800&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --space:#09192E; --space-2:#0E2436; --teal:#3FC3DA; --teal-dk:#0E8099;
+    --gold:#C8A230; --green:#00B876; --white:#F7FAFB; --graphite:#94A8BC; --line:rgba(255,255,255,.08);
+  }
+  *{margin:0;padding:0;box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{background:var(--space);color:var(--white);font-family:'Inter',sans-serif;line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+  .wrap{max-width:1120px;margin:0 auto;padding:0 28px}
+  h1,h2,h3,.disp{font-family:'Barlow Condensed',sans-serif;line-height:1.05;letter-spacing:.01em}
+  .mono{font-family:'JetBrains Mono',monospace}
+  a{color:inherit;text-decoration:none}
+  .teal{color:var(--teal)} .gold{color:var(--gold)} .green{color:var(--green)}
+
+  /* logo lockup */
+  .logo{font-family:'Barlow Condensed',sans-serif;font-size:26px;letter-spacing:.02em}
+  .logo b{font-weight:800;color:var(--white)} .logo span{font-weight:300;color:var(--teal)}
+
+  /* nav */
+  nav{position:fixed;top:0;left:0;right:0;z-index:50;background:rgba(11,29,46,.82);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+  nav .wrap{display:flex;align-items:center;justify-content:space-between;height:64px}
+  .navlinks{display:flex;gap:30px;font-size:14px;font-weight:500;color:var(--graphite)}
+  .navlinks a:hover{color:var(--white)}
+  .btn{display:inline-block;background:var(--teal);color:var(--space);font-weight:600;font-size:14px;padding:10px 20px;border-radius:8px;transition:.2s}
+  .btn:hover{background:#3ec8e6}
+  .btn-ghost{background:transparent;border:1px solid var(--line);color:var(--white)}
+  .btn-ghost:hover{border-color:var(--teal);background:transparent}
+  @media(max-width:760px){.navlinks{display:none}}
+
+  /* hero */
+  .hero{padding:160px 0 90px;position:relative}
+  .hero::before{content:"";position:absolute;top:-10%;right:-10%;width:620px;height:620px;background:radial-gradient(circle,rgba(0,180,216,.18),transparent 65%);pointer-events:none}
+  .eyebrow{display:inline-flex;align-items:center;gap:9px;font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--teal);font-weight:600;margin-bottom:22px}
+  .eyebrow::before{content:"";width:26px;height:1px;background:var(--teal)}
+  .hero h1{font-size:clamp(48px,8vw,92px);font-weight:800;margin-bottom:24px}
+  .hero h1 .lt{font-weight:300;color:var(--graphite)}
+  .hero p.lead{font-size:clamp(17px,2.1vw,20px);color:var(--graphite);max-width:560px;margin-bottom:38px}
+  .cta-row{display:flex;gap:14px;flex-wrap:wrap}
+
+  /* proof bar */
+  .proof{border-top:1px solid var(--line);border-bottom:1px solid var(--line);background:var(--space-2)}
+  .proof .wrap{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;padding:36px 28px}
+  .proof .stat .n{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:42px;color:var(--white);line-height:1}
+  .proof .stat .n em{color:var(--teal);font-style:normal}
+  .proof .stat .l{font-size:13px;color:var(--graphite);margin-top:6px}
+  @media(max-width:760px){.proof .wrap{grid-template-columns:repeat(2,1fr);gap:30px 18px}}
+
+  /* sections */
+  section.blk{padding:92px 0}
+  .sec-head{margin-bottom:54px;max-width:620px}
+  .sec-head .kick{font-size:12.5px;letter-spacing:.16em;text-transform:uppercase;color:var(--gold);font-weight:600;margin-bottom:14px}
+  .sec-head h2{font-size:clamp(32px,5vw,46px);font-weight:700}
+  .sec-head p{color:var(--graphite);margin-top:16px;font-size:17px}
+
+  /* story */
+  .story{display:grid;grid-template-columns:1.1fr .9fr;gap:54px;align-items:center}
+  .story p{color:var(--graphite);margin-bottom:18px}
+  .story .pull{border-left:2px solid var(--teal);padding-left:22px;color:var(--white);font-family:'Barlow Condensed',sans-serif;font-size:24px;font-weight:500;line-height:1.25}
+  .badge-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+  .badge{background:var(--space-2);border:1px solid var(--line);border-radius:12px;padding:22px}
+  .badge .t{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:19px;margin-bottom:6px}
+  .badge .d{font-size:13.5px;color:var(--graphite)}
+  .badge .ic{color:var(--teal);font-size:13px;font-weight:600;letter-spacing:.1em;text-transform:uppercase}
+  @media(max-width:840px){.story{grid-template-columns:1fr;gap:36px}}
+
+  /* products */
+  .prod-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .card{background:linear-gradient(180deg,var(--space-2),rgba(14,36,54,.4));border:1px solid var(--line);border-radius:16px;padding:30px;transition:.25s}
+  .card:hover{border-color:var(--teal);transform:translateY(-4px)}
+  .card .tag{display:inline-block;font-size:11px;letter-spacing:.12em;text-transform:uppercase;font-weight:600;padding:5px 11px;border-radius:30px;margin-bottom:18px}
+  .tag-daily{background:rgba(0,180,216,.14);color:var(--teal)}
+  .tag-pro{background:rgba(0,184,118,.14);color:var(--green)}
+  .tag-prem{background:rgba(200,162,48,.16);color:var(--gold)}
+  .card h3{font-size:25px;font-weight:700;margin-bottom:10px}
+  .card .sub{font-size:14px;color:var(--graphite);margin-bottom:20px;min-height:42px}
+  .card ul{list-style:none;font-size:14px;color:var(--graphite)}
+  .card li{padding:7px 0;border-top:1px solid var(--line);display:flex;justify-content:space-between;gap:10px}
+  .card li b{color:var(--white);font-weight:600}
+  @media(max-width:840px){.prod-grid{grid-template-columns:1fr}}
+
+  /* markets */
+  .mkt-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .mkt{padding:30px;border-radius:16px;border:1px solid var(--line);background:var(--space-2)}
+  .mkt .k{font-family:'JetBrains Mono',monospace;font-size:13px;color:var(--teal);margin-bottom:14px}
+  .mkt h3{font-size:23px;font-weight:700;margin-bottom:10px}
+  .mkt p{font-size:14px;color:var(--graphite)}
+  @media(max-width:840px){.mkt-grid{grid-template-columns:1fr}}
+
+  /* presence */
+  .pres{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .pres .node{text-align:center;padding:34px 20px;border:1px solid var(--line);border-radius:16px;background:var(--space-2)}
+  .pres .node .role{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:600}
+  .pres .node .city{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:30px;margin:10px 0 6px}
+  .pres .node .desc{font-size:13.5px;color:var(--graphite)}
+  @media(max-width:760px){.pres{grid-template-columns:1fr}}
+
+  /* team */
+  .team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+  .member{background:var(--space-2);border:1px solid var(--line);border-radius:16px;padding:28px}
+  .member .av{width:58px;height:58px;border-radius:50%;background:linear-gradient(135deg,var(--teal),var(--teal-dk));display:flex;align-items:center;justify-content:center;font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:22px;color:var(--space);margin-bottom:18px}
+  .member .nm{font-family:'Barlow Condensed',sans-serif;font-weight:700;font-size:21px}
+  .member .rl{font-size:13px;color:var(--teal);margin-bottom:10px;font-weight:500}
+  .member .bio{font-size:13.5px;color:var(--graphite)}
+  @media(max-width:840px){.team-grid{grid-template-columns:1fr 1fr}}
+  @media(max-width:560px){.team-grid{grid-template-columns:1fr}}
+
+  /* cta band */
+  .band{background:linear-gradient(120deg,var(--teal-dk),var(--space));border-radius:24px;padding:60px;text-align:center;margin:0 0 0}
+  .band h2{font-size:clamp(30px,5vw,44px);font-weight:800;margin-bottom:16px}
+  .band p{color:rgba(255,255,255,.85);max-width:520px;margin:0 auto 30px}
+
+  footer{border-top:1px solid var(--line);padding:46px 0;margin-top:0}
+  footer .wrap{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:18px}
+  footer .fnav{display:flex;gap:24px;font-size:13.5px;color:var(--graphite)}
+  footer .cr{font-size:12.5px;color:#5e7388}
+  .note{background:rgba(200,162,48,.08);border:1px dashed rgba(200,162,48,.4);border-radius:10px;padding:10px 16px;font-size:12.5px;color:var(--gold);margin-top:14px;font-family:'JetBrains Mono',monospace}
+</style>
+</head>
+<body>
+
+<nav>
+  <div class="wrap">
+    <div class="logo"><b>AIR</b><span>LYFE</span></div>
+    <div class="navlinks">
+      <a href="#tech">Technology</a>
+      <a href="#products">Products</a>
+      <a href="#markets">Markets</a>
+      <a href="#team">Company</a>
+    </div>
+    <a href="#contact" class="btn">Contact</a>
+  </div>
+</nav>
+
+<header class="hero">
+  <div class="wrap">
+    <span class="eyebrow">Air Technology &amp; Filter Systems</span>
+    <h1>Breathe<br><span class="lt">with</span> proof.</h1>
+    <p class="lead">Reusable masks and replaceable filters built on 40+ patents and ten years of KAIST university research. Clinical-grade protection, validated by data - not claims.</p>
+    <div class="cta-row">
+      <a href="#contact" class="btn">Partner with us</a>
+      <a href="#tech" class="btn btn-ghost">See the technology</a>
+    </div>
+  </div>
+</header>
+
+<div class="proof">
+  <div class="wrap">
+    <div class="stat"><div class="n"><em>40+</em></div><div class="l">Patents across filtration &amp; materials</div></div>
+    <div class="stat"><div class="n"><em>10</em> yrs</div><div class="l">KAIST university R&amp;D</div></div>
+    <div class="stat"><div class="n"><em>94</em>%+</div><div class="l">PM2.5 filtration efficiency</div></div>
+    <div class="stat"><div class="n"><em>120</em> hrs</div><div class="l">Use per filter - vs 24 hrs for N95</div></div>
+  </div>
+</div>
+
+<section class="blk" id="tech">
+  <div class="wrap">
+    <div class="story">
+      <div>
+        <div class="sec-head" style="margin-bottom:30px">
+          <div class="kick">Born to Save Lives</div>
+          <h2>Filtration science,<br>made wearable.</h2>
+        </div>
+        <p>Air pollution drives millions of preventable deaths every year. Airlyfe exists to put proven, clinical-grade protection on every face that needs it - affordably, comfortably, and at scale.</p>
+        <p>Our core technology comes out of a decade of KAIST university research and a patent portfolio spanning filter media and materials engineering. The result is a mask that filters like an N95, breathes more easily, lasts far longer, and is built to be reused.</p>
+        <div class="pull">One mask. Replaceable filters. Real, repeatable data behind every claim.</div>
+      </div>
+      <div class="badge-grid">
+        <div class="badge"><div class="ic">Proven</div><div class="t">University R&amp;D</div><div class="d">40+ patents, ten years of KAIST research, clinical validation.</div></div>
+        <div class="badge"><div class="ic">Protective</div><div class="t">94%+ filtration</div><div class="d">N95-equivalent protection against PM2.5 and airborne particulates.</div></div>
+        <div class="badge"><div class="ic">Sustainable</div><div class="t">Reusable system</div><div class="d">Replaceable filters and washable bodies - far less waste than single-use.</div></div>
+        <div class="badge"><div class="ic">Accessible</div><div class="t">Built to scale</div><div class="d">Engineered to outperform N95 on cost-per-use across every market.</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="blk" id="products" style="background:var(--space-2)">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kick">Product Line</div>
+      <h2>One platform, three formats.</h2>
+      <p>The same filtration core, configured for daily wear, professional use, and premium environments - and ready to co-brand for institutional partners.</p>
+    </div>
+    <div class="prod-grid">
+      <div class="card">
+        <span class="tag tag-daily">Daily</span>
+        <h3>Airlyfe Flex</h3>
+        <div class="sub">Lightweight, foldable, comfortable everyday protection.</div>
+        <ul>
+          <li>Format <b>Disposable body</b></li>
+          <li>Filter <b>2-pocket, integrated</b></li>
+          <li>Lifespan <b>~120 hrs / 5 days</b></li>
+          <li>Best for <b>Commuters, riders</b></li>
+        </ul>
+      </div>
+      <div class="card">
+        <span class="tag tag-pro">Professional</span>
+        <h3>Airlyfe Pro</h3>
+        <div class="sub">Housing-based body - swap only the filter, keep the mask.</div>
+        <ul>
+          <li>Format <b>Reusable housing</b></li>
+          <li>Filter <b>Replaceable insert</b></li>
+          <li>Lifespan <b>~20 days / filter</b></li>
+          <li>Best for <b>Hospitals, field work</b></li>
+        </ul>
+      </div>
+      <div class="card">
+        <span class="tag tag-prem">Premium</span>
+        <h3>Airlyfe Signature</h3>
+        <div class="sub">Elevated form and finish for high-specification settings.</div>
+        <ul>
+          <li>Format <b>Premium housing</b></li>
+          <li>Filter <b>Replaceable insert</b></li>
+          <li>Lifespan <b>AQI-dependent</b></li>
+          <li>Best for <b>Specialist &amp; executive use</b></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="blk" id="markets">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kick">Who We Serve</div>
+      <h2>From the field to the home.</h2>
+      <p>We anchor with institutions that need protection at scale, and build a consumer brand in parallel.</p>
+    </div>
+    <div class="mkt-grid">
+      <div class="mkt"><div class="k">// B2G</div><h3>Government &amp; Defense</h3><p>Frontline and field-deployed protection for military, police, and public-sector workforces operating in hazardous air.</p></div>
+      <div class="mkt"><div class="k">// B2B</div><h3>Hospitals &amp; Industry</h3><p>A reusable, lower-cost-per-use alternative to N95 for healthcare, construction, and high-AQI industrial environments.</p></div>
+      <div class="mkt"><div class="k">// B2C</div><h3>Everyday Protection</h3><p>A trusted consumer brand for commuters, riders, families, and anyone living with polluted air - backed by the same science.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="blk" id="presence" style="background:var(--space-2)">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kick">Global Footprint</div>
+      <h2>Built across borders.</h2>
+    </div>
+    <div class="pres">
+      <div class="node"><div class="role">Headquarters</div><div class="city">Korea</div><div class="desc">R&amp;D origin and technology base - KAIST research and the core patent portfolio.</div></div>
+      <div class="node"><div class="role">Production Base</div><div class="city">Manufacturing</div><div class="desc">Filter and assembly supply, with regional manufacturing partnerships in development.</div></div>
+      <div class="node"><div class="role">Global Marketing</div><div class="city">Worldwide</div><div class="desc">Brand, partnerships, and market entry across South &amp; Southeast Asia, the Middle East, and the US.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="blk" id="team">
+  <div class="wrap">
+    <div class="sec-head">
+      <div class="kick">Leadership</div>
+      <h2>The team behind the proof.</h2>
+      <p>A founding team spanning deep-tech research, product, operations, growth, and market access.</p>
+    </div>
+    <div class="team-grid">
+      <div class="member"><div class="av">H</div><div class="nm">Dr. Han</div><div class="rl">Founder &amp; Chief Scientist</div><div class="bio">KAIST researcher behind the core filtration technology and 40+ patents.</div></div>
+      <div class="member"><div class="av">J</div><div class="nm">Jin Wook Yoon</div><div class="rl">Head of Product &amp; Technology</div><div class="bio">Translates deep-tech research into manufacturable product and IP strategy.</div></div>
+      <div class="member"><div class="av">J</div><div class="nm">Joanna Rubin</div><div class="rl">Chief Marketing Officer</div><div class="bio">Brand, marketing, and go-to-market across institutional and consumer channels.</div></div>
+      <div class="member"><div class="av">T</div><div class="nm">Taha Mahmood</div><div class="rl">Partnerships &amp; Market Access</div><div class="bio">Institutional partnerships and market entry across South Asia.</div></div>
+      <div class="member"><div class="av">R</div><div class="nm">Raghu</div><div class="rl">Supply Chain &amp; Operations</div><div class="bio">Logistics, 3PL, and APAC operations for physical-product launch.</div></div>
+      <div class="member"><div class="av">D</div><div class="nm">Daniel</div><div class="rl">US Operations &amp; Defense</div><div class="bio">US procurement pathway and veteran-channel access.</div></div>
+    </div>
+  </div>
+</section>
+
+<section class="blk" id="contact">
+  <div class="wrap">
+    <div class="band">
+      <h2>Let's talk protection at scale.</h2>
+      <p>For hospital, government, and institutional partnerships - or to bring Airlyfe to your market - reach out.</p>
+      <a href="mailto:hello@airlyfe.us" class="btn" style="background:var(--white);color:var(--space)">hello@airlyfe.us</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <div class="logo"><b>AIR</b><span>LYFE</span></div>
+      <div class="cr" style="margin-top:8px">Air Technology &amp; Filter Systems - Breathe With Proof.</div>
+    </div>
+    <div class="fnav">
+      <a href="#tech">Technology</a>
+      <a href="#products">Products</a>
+      <a href="#markets">Markets</a>
+      <a href="#contact">Contact</a>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
