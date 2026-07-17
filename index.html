@@ -34,6 +34,11 @@
   "logo": "https://airlyfe.us/og-image.png",
   "slogan": "Breathe With Proof",
   "foundingLocation": { "@type": "Place", "name": "Republic of Korea" },
+  "memberOf": {
+    "@type": "Organization",
+    "name": "SHEMA Co., Ltd.",
+    "description": "Korean research group of Dr. Han; origin of the Airlyfe filtration technology and its intellectual property."
+  },
   "areaServed": ["South Asia", "Southeast Asia", "Middle East", "United States"],
   "knowsAbout": ["Air filtration", "PM2.5 protection", "Reusable respiratory masks", "Filter media engineering"]
 }
@@ -121,6 +126,20 @@
   .proof .stat .n em{color:var(--teal);font-style:normal}
   .proof .stat .l{font-size:13px;color:var(--graphite);margin-top:6px}
   @media(max-width:760px){.proof .wrap{grid-template-columns:repeat(2,1fr);gap:30px 18px}}
+
+  /* technology partner strip */
+  .partner{border-bottom:1px solid var(--line);background:var(--space)}
+  .partner .wrap{display:grid;grid-template-columns:auto 1fr;gap:38px;align-items:center;padding:34px 28px}
+  .partner .mark{display:flex;flex-direction:column;gap:6px;padding-right:38px;border-right:1px solid var(--line)}
+  .partner .mark .lbl{font-family:'JetBrains Mono',monospace;font-size:10.5px;letter-spacing:.18em;text-transform:uppercase;color:var(--gold);font-weight:500}
+  .partner .mark .nm{font-family:'Barlow Condensed',sans-serif;font-weight:800;font-size:30px;letter-spacing:.02em;line-height:1;white-space:nowrap}
+  .partner .mark .nm span{font-weight:300;color:var(--graphite);font-size:19px}
+  .partner .txt{font-size:15px;color:var(--graphite);max-width:640px}
+  .partner .txt b{color:var(--white);font-weight:600}
+  @media(max-width:760px){
+    .partner .wrap{grid-template-columns:1fr;gap:20px}
+    .partner .mark{padding-right:0;border-right:0;padding-bottom:18px;border-bottom:1px solid var(--line)}
+  }
 
   /* sections */
   section.blk{padding:92px 0}
@@ -266,6 +285,18 @@
   </div>
 </div>
 
+<div class="partner">
+  <div class="wrap reveal">
+    <div class="mark">
+      <div class="lbl">Technology Partner</div>
+      <div class="nm">SHEMA <span>Co., Ltd.</span></div>
+    </div>
+    <div class="txt">
+      Airlyfe is built <b>in partnership with SHEMA Co., Ltd.</b>, the Korean research group of Dr. Han, where the filtration technology and its intellectual property originate. SHEMA develops the filter science; Airlyfe brings it to the markets that need it.
+    </div>
+  </div>
+</div>
+
 <section class="blk" id="tech">
   <div class="wrap">
     <div class="story">
@@ -397,6 +428,7 @@
     <div>
       <div class="logo"><b>AIR</b><span>LYFE</span></div>
       <div class="cr" style="margin-top:8px">Air Technology &amp; Filter Systems - Breathe With Proof.</div>
+      <div class="cr" style="margin-top:4px">In partnership with SHEMA Co., Ltd.</div>
     </div>
     <div class="fnav">
       <a href="#tech">Technology</a>
